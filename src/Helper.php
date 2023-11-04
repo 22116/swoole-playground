@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lsbproject\SwoolePlayground;
+namespace LsbProject\SwoolePlayground;
 
 use OpenSwoole\Http\Request;
 use OpenSwoole\Http\Response;

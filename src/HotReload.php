@@ -1,6 +1,6 @@
 <?php
 
-namespace Lsbproject\SwoolePlayground;
+namespace LsbProject\SwoolePlayground;
 
 use OpenSwoole\Server;
 use RecursiveDirectoryIterator;

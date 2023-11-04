@@ -4,7 +4,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Lsbproject\\SwoolePlayground\\": "src/"
+            "LsbProject\\SwoolePlayground\\": "src/"
         }
     },
     "authors": [
