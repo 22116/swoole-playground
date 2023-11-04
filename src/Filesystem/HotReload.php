@@ -7,7 +7,7 @@ use RecursiveIteratorIterator;
 
 class HotReload
 {
-    public function __construct(private readonly string $filePath = __DIR__ . '/..') { }
+    public function __construct(private readonly string $filePath = __DIR__ . '/../..') { }
 
     public function initialize(): FileWatcher
     {

@@ -5,9 +5,9 @@ declare(strict_types=1);
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use LsbProject\SwoolePlayground\Controller\BasicController;
-use OpenSwoole\Http\Request;
-use OpenSwoole\Http\Response;
-use OpenSwoole\Http\Server;
+use Swoole\Http\Request;
+use Swoole\Http\Response;
+use Swoole\Http\Server;
 
 $host = $_ENV['APP_HOST'] ??  '127.0.0.1';
 $ip = (int) ($_ENV['APP_PORT'] ?? 9501);

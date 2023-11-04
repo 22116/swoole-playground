@@ -4,289 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf7c5bba5da4beb91bbc9c51d4cd61e7",
-    "packages": [
-        {
-            "name": "openswoole/core",
-            "version": "22.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/openswoole/core.git",
-                "reference": "b3388a0ed7c0df59db2c4c07c1dcc16e3efffa49"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/openswoole/core/zipball/b3388a0ed7c0df59db2c4c07c1dcc16e3efffa49",
-                "reference": "b3388a0ed7c0df59db2c4c07c1dcc16e3efffa49",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openswoole": ">=22.0",
-                "php": ">=7.4",
-                "psr/http-message": "^1.0",
-                "psr/http-server-middleware": "^1.0.0"
-            },
-            "require-dev": {
-                "ext-curl": "*",
-                "ext-sockets": "*",
-                "friendsofphp/php-cs-fixer": "^3.6",
-                "openswoole/ide-helper": "^22.0",
-                "php-http/psr7-integration-tests": "^1.1",
-                "phpunit/phpunit": "^9.5"
-            },
-            "suggest": {
-                "ext-mysqli": "*",
-                "ext-pdo": "*",
-                "ext-redis": "Required to use redis database, and the required version is greater than or equal to 3.1.3"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/Coroutine/functions.php"
-                ],
-                "psr-4": {
-                    "OpenSwoole\\Core\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "OpenSwoole Group",
-                    "email": "hello@openswoole.com"
-                }
-            ],
-            "description": "Openswoole core library",
-            "homepage": "https://openswoole.com",
-            "keywords": [
-                "http",
-                "http2",
-                "mqtt",
-                "openswoole",
-                "php",
-                "tcp",
-                "websocket"
-            ],
-            "support": {
-                "docs": "https://openswoole.com/docs",
-                "issues": "https://github.com/openswoole/openswoole/issues",
-                "pull-request": "https://github.com/openswoole/openswoole/pulls",
-                "source": "https://github.com/openswoole/openswoole"
-            },
-            "time": "2023-02-08T19:39:20+00:00"
-        },
-        {
-            "name": "psr/http-message",
-            "version": "1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-message.git",
-                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
-                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2 || ^8.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP messages",
-            "homepage": "https://github.com/php-fig/http-message",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "support": {
-                "source": "https://github.com/php-fig/http-message/tree/1.1"
-            },
-            "time": "2023-04-04T09:50:52+00:00"
-        },
-        {
-            "name": "psr/http-server-handler",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-server-handler.git",
-                "reference": "3cf66170cf70b854699046e5f38479ab21bc83f1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-server-handler/zipball/3cf66170cf70b854699046e5f38479ab21bc83f1",
-                "reference": "3cf66170cf70b854699046e5f38479ab21bc83f1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0",
-                "psr/http-message": "^1.0 || ^2.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Server\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP server-side request handler",
-            "keywords": [
-                "handler",
-                "http",
-                "http-interop",
-                "psr",
-                "psr-15",
-                "psr-7",
-                "request",
-                "response",
-                "server"
-            ],
-            "support": {
-                "source": "https://github.com/php-fig/http-server-handler"
-            },
-            "time": "2023-09-22T11:17:02+00:00"
-        },
-        {
-            "name": "psr/http-server-middleware",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-server-middleware.git",
-                "reference": "459eeb7efeae55b4102a951c4ecc93a11ce58d0f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-server-middleware/zipball/459eeb7efeae55b4102a951c4ecc93a11ce58d0f",
-                "reference": "459eeb7efeae55b4102a951c4ecc93a11ce58d0f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0",
-                "psr/http-message": "^1.0 || ^2.0",
-                "psr/http-server-handler": "^1.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Server\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP server-side middleware",
-            "keywords": [
-                "http",
-                "http-interop",
-                "middleware",
-                "psr",
-                "psr-15",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "support": {
-                "issues": "https://github.com/php-fig/http-server-middleware/issues",
-                "source": "https://github.com/php-fig/http-server-middleware"
-            },
-            "time": "2023-09-22T11:17:21+00:00"
-        }
-    ],
+    "content-hash": "57fdb0d3609fbe5fe5150dcfbd3f6359",
+    "packages": [],
     "packages-dev": [
-        {
-            "name": "openswoole/ide-helper",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/openswoole/ide-helper.git",
-                "reference": "b2e4ac3d4d2e6d1b754429d7c8b22a2accba33d5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/openswoole/ide-helper/zipball/b2e4ac3d4d2e6d1b754429d7c8b22a2accba33d5",
-                "reference": "b2e4ac3d4d2e6d1b754429d7c8b22a2accba33d5",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openswoole": ">=22.0",
-                "php": ">=7.4"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.6"
-            },
-            "default-branch": true,
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "OpenSwoole Group",
-                    "email": "hello@openswoole.com"
-                }
-            ],
-            "description": "IDE helper for OpenSwoole.",
-            "support": {
-                "issues": "https://github.com/openswoole/ide-helper/issues",
-                "source": "https://github.com/openswoole/ide-helper/tree/master"
-            },
-            "time": "2023-03-22T17:58:54+00:00"
-        },
         {
             "name": "roave/security-advisories",
             "version": "dev-latest",
@@ -975,18 +695,52 @@
                 }
             ],
             "time": "2023-11-03T20:04:24+00:00"
+        },
+        {
+            "name": "swoole/ide-helper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swoole/ide-helper.git",
+                "reference": "07692fa8f1bb8eac828410acd613ea5877237b09"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swoole/ide-helper/zipball/07692fa8f1bb8eac828410acd613ea5877237b09",
+                "reference": "07692fa8f1bb8eac828410acd613ea5877237b09",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Team Swoole",
+                    "email": "team@swoole.com"
+                }
+            ],
+            "description": "IDE help files for Swoole.",
+            "support": {
+                "issues": "https://github.com/swoole/ide-helper/issues",
+                "source": "https://github.com/swoole/ide-helper/tree/5.1.0"
+            },
+            "time": "2023-10-05T04:52:59+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "roave/security-advisories": 20,
-        "openswoole/ide-helper": 20
+        "swoole/ide-helper": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "ext-openswoole": ">=22.0"
+        "ext-swoole": ">=5.1",
+        "ext-inotify": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"

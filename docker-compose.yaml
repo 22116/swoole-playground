@@ -19,3 +19,36 @@ services:
   hot-reloading:
     <<: *server
     command: php /app/bin/hot-reloading.php
+
+  tcp-client:
+    <<: *base
+    environment:
+      APP_HOST: tcp-server
+      APP_PORT: 9999
+    command: php /app/bin/tcp-client.php
+
+  tcp-server:
+    <<: *server
+    command: php /app/bin/tcp-server.php
+
+  udp-client:
+    <<: *base
+    environment:
+      APP_HOST: udp-server
+      APP_PORT: 9999
+    command: php /app/bin/udp-client.php
+
+  udp-server:
+    <<: *server
+    command: php /app/bin/udp-server.php
+
+  ws-client:
+    <<: *base
+    environment:
+      APP_HOST: ws-server
+      APP_PORT: 9999
+    command: php /app/bin/ws-client.php
+
+  ws-server:
+    <<: *server
+    command: php /app/bin/ws-server.php

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace LsbProject\SwoolePlayground\Controller;
 
-use OpenSwoole\Http\Request;
-use OpenSwoole\Http\Response;
+use Swoole\Http\Request;
+use Swoole\Http\Response;
 
 class BasicController
 {

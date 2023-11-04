@@ -15,12 +15,11 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "ext-openswoole": ">=22.0",
-        "openswoole/core": "22.1.2",
+        "ext-swoole": ">=5.1",
         "ext-inotify": "*"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
-        "openswoole/ide-helper": "@dev"
+        "swoole/ide-helper": "@dev"
     }
 }
