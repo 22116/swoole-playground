@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace LsbProject\SwoolePlayground;
+namespace LsbProject\SwoolePlayground\Controller;
 
 use OpenSwoole\Http\Request;
 use OpenSwoole\Http\Response;
 
-class Helper
+class BasicController
 {
     public static function onRequest(Request $request, Response $response): void
     {

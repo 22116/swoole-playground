@@ -1,6 +1,6 @@
 <?php
 
-namespace LsbProject\SwoolePlayground;
+namespace LsbProject\SwoolePlayground\Filesystem;
 
 class FileWatcher
 {

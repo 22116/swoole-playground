@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Lsbproject\SwoolePlayground\Helper;
+use LsbProject\SwoolePlayground\Controller\BasicController;
 use OpenSwoole\Http\Request;
 use OpenSwoole\Http\Response;
 use OpenSwoole\Http\Server;
@@ -26,7 +26,7 @@ $server->on('start', function (Server $server) use ($host, $ip) {
 });
 
 $server->on('request', function (Request $request, Response $response) {
-    Helper::onRequest($request, $response);
+    BasicController::onRequest($request, $response);
 });
 
 $server->start();
