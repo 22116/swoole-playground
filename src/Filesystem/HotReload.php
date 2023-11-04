@@ -2,7 +2,6 @@
 
 namespace LsbProject\SwoolePlayground\Filesystem;
 
-use OpenSwoole\Server;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 
@@ -35,21 +34,5 @@ class HotReload
     public function getFilePath(): string
     {
         return $this->filePath;
-    }
-
-    public static function apply(Server $server, string $filePath = __DIR__ . '/..'): void
-    {
-        $hr = new self($filePath);
-        $fileWatcher = $hr->initialize();
-
-        echo "File watcher is looking for a changes in {$hr->getFilePath()}\n";
-
-        $server->tick(1000, function () use ($fileWatcher, $server) {
-            if ($fileWatcher->hasChanges()) {
-                echo "File modification detected, reloading the server.\n";
-
-                $server->reload();
-            }
-        });
     }
 }

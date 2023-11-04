@@ -25,7 +25,18 @@ $server->set([
 $server->on('start', function (Server $server) use ($host, $ip) {
     echo "Swoole http server is started at http://$host:$ip\n";
 
-    HotReload::apply($server);
+    $hotReload = new HotReload();
+    $fileWatcher = $hotReload->initialize();
+
+    echo "File watcher is looking for a changes in {$hotReload->getFilePath()}\n";
+
+    $server->tick(1000, function () use ($fileWatcher, $server) {
+        if ($fileWatcher->hasChanges()) {
+            echo "File modification detected, reloading the server.\n";
+
+            $server->reload();
+        }
+    });
 });
 
 $server->on('request', function (Request $request, Response $response) {
