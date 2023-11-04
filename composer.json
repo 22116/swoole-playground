@@ -1,0 +1,26 @@
+{
+    "name": "lsbproject/swoole-playground",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lsbproject\\SwoolePlayground\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Victor Fedorenko",
+            "email": "fedorenko22116@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "ext-openswoole": ">=22.0",
+        "openswoole/core": "22.1.2",
+        "ext-inotify": "*"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "openswoole/ide-helper": "@dev"
+    }
+}

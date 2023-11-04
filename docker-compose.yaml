@@ -1,0 +1,21 @@
+version: "3"
+services:
+  bash: &base
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: sh
+
+  simple-server: &server
+    <<: *base
+    ports:
+      - "9999:9999"
+    environment:
+      APP_HOST: 0.0.0.0
+      APP_PORT: 9999
+    command: php /app/bin/simple-server.php
+
+  hot-reloading:
+    <<: *server
+    command: php /app/bin/hot-reloading.php
