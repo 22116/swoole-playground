@@ -16,7 +16,8 @@
     "minimum-stability": "dev",
     "require": {
         "ext-swoole": ">=5.1",
-        "ext-inotify": "*"
+        "ext-inotify": "*",
+        "ext-pcntl": "*"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
