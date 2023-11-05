@@ -79,3 +79,15 @@ services:
       - "9501:9501"
       - "9502:9502"
     command: php /app/bin/coroutine-server.php
+
+  barrier:
+    <<: *base
+    command: php /app/bin/barrier.php
+
+  batch:
+    <<: *base
+    command: php /app/bin/batch.php
+
+  map:
+    <<: *base
+    command: php /app/bin/map.php
