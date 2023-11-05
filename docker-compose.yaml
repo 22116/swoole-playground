@@ -60,3 +60,22 @@ services:
   coroutine:
     <<: *base
     command: php /app/bin/coroutine.php
+
+  channel:
+    <<: *base
+    command: php /app/bin/channel.php
+
+  wait-group:
+    <<: *base
+    command: php /app/bin/wait-group.php
+
+  scheduler:
+    <<: *base
+    command: php /app/bin/scheduler.php
+
+  coroutine-server:
+    <<: *server
+    ports:
+      - "9501:9501"
+      - "9502:9502"
+    command: php /app/bin/coroutine-server.php

@@ -8,7 +8,7 @@ use Swoole\Server;
 
 $host = $_ENV['APP_HOST'] ??  '127.0.0.1';
 $ip = (int) ($_ENV['APP_PORT'] ?? 9501);
-$server = new Server($host, $ip, Server::SIMPLE_MODE, Swoole\Constant::SOCK_TCP);
+$server = new Server($host, $ip);
 $server->set([
     'worker_num' => 4,   // The number of worker processes
     'daemonize' => false, // Whether to start as a daemon process

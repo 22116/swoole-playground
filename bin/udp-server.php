@@ -8,7 +8,7 @@ use Swoole\Server;
 
 $host = $_ENV['APP_HOST'] ??  '127.0.0.1';
 $ip = (int) ($_ENV['APP_PORT'] ?? 9501);
-$server = new Server($host, $ip, Server::SIMPLE_MODE, Swoole\Constant::SOCK_UDP);
+$server = new Server($host, $ip, sock_type: SWOOLE_SOCK_UDP);
 
 $server->on('start', function (Server $server) use ($host, $ip) {
     echo "Swoole TCP server is started at udp://$host:$ip\n";

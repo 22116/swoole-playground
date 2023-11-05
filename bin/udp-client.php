@@ -9,7 +9,7 @@ use Swoole\Constant;
 
 $host = $_ENV['APP_HOST'] ??  '127.0.0.1';
 $ip = (int) ($_ENV['APP_PORT'] ?? 9501);
-$client = new Client(Constant::SOCK_UDP);
+$client = new Client(SWOOLE_SOCK_UDP);
 
 if (!$client->connect($host, $ip, -1)) {
     echo "connect failed. Error: {$client->errCode}. Check {$host}:{$ip}\n";
