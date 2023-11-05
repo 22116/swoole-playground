@@ -91,3 +91,11 @@ services:
   map:
     <<: *base
     command: php /app/bin/map.php
+
+  process:
+    <<: *base
+    command: php /app/bin/process.php
+
+  process-queue:
+    <<: *base
+    command: php /app/bin/process-queue.php
