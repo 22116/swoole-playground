@@ -99,3 +99,7 @@ services:
   process-queue:
     <<: *base
     command: php /app/bin/process-queue.php
+
+  process-pool:
+    <<: *base
+    command: php /app/bin/process-pool.php

@@ -9,6 +9,7 @@ use LsbProject\SwoolePlayground\Filesystem\HotReload;
 use Swoole\Http\Request;
 use Swoole\Http\Response;
 use Swoole\Http\Server;
+use Swoole\Timer;
 
 $host = $_ENV['APP_HOST'] ??  '127.0.0.1';
 $ip = (int) ($_ENV['APP_PORT'] ?? 9501);
@@ -30,7 +31,7 @@ $server->on('start', function (Server $server) use ($host, $ip) {
 
     echo "File watcher is looking for a changes in {$hotReload->getFilePath()}\n";
 
-    $server->tick(1000, function () use ($fileWatcher, $server) {
+    Timer::tick(1000, static function () use ($fileWatcher, $server) {
         if ($fileWatcher->hasChanges()) {
             echo "File modification detected, reloading the server.\n";
 
